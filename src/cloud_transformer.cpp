@@ -1,14 +1,3 @@
-/*******************************************************************************
- * Copyright (C) 2017 Electric Movement Inc.
- *
- * This file is part of Robotic Arm: Pick and Place project for Udacity
- * Robotics nano-degree program
- *
- * All Rights Reserved.
- ******************************************************************************/
-
-// Author: Harsh Pandya
-
 #include <ros/ros.h>
 #include <pcl_conversions/pcl_conversions.h>
 #include <pcl_ros/point_cloud.h>
@@ -17,11 +6,6 @@
 #include <pcl/point_types.h>
 #include <sensor_msgs/PointCloud2.h>
 #include <tf/transform_listener.h>
-
-/*
-* Brief:
-* This node transforms point cloud from /camera_link frame to /world frame
-*/
 
 class CloudTransformer
 {
@@ -50,7 +34,7 @@ private:
     pcl_ros::transformPointCloud("/marker", *pcl_msg, *buffer_, listener_);
     pcl_pub_.publish(buffer_);
   }
-};  // End of class CloudTransformer
+}; 
 
 int main(int argc, char **argv)
 {
@@ -59,7 +43,7 @@ int main(int argc, char **argv)
 
   CloudTransformer tranform_cloud(nh);
 
-  // Spin until ROS is shutdown
+  // ROS Loop
   while (ros::ok())
     ros::spin();
 
