@@ -1,5 +1,5 @@
 # ROS-point-cloud-Transformer
-## Simple ROS package for transforming point cloud using ROS TF tree
+## Simple ROS package for point cloud transformation using ROS TF tree
 
 ## Set Up
 1. Clone this repo to your catlin workspace
