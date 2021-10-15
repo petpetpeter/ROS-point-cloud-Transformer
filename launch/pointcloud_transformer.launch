@@ -1,5 +1,0 @@
-<launch>
-    <node name="pointclod_TF" pkg="pointcloud_transformer" type="cloud_transformer" />
-    <remap from="/inputPC" to="/voxel_grid/output" />
-    <remap from="/outputPC" to="/BentoBox" />
-</launch>
