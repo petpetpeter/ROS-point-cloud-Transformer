@@ -16,4 +16,4 @@
   </node> 
 </launch>
 ```
-change input,output and frame in, frame out 
+change in-out topic and frame ID to your desire
