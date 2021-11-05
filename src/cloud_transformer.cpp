@@ -22,10 +22,6 @@ public:
     pcl_sub_ = nh_.subscribe("/inputPC", 1, &CloudTransformer::pclCallback, this);
     pcl_pub_ = nh_.advertise<sensor_msgs::PointCloud2>("/outputPC", 1);
 
-    // std::string frameIn;
-    // std::string frameOut;
-    // nh_.getParam("/cloud_tansformer/frameIn", frameIn);
-    // nh_.getParam("/cloud_tansformer/frameOut", frameOut); 
     std::string frameIn;
     std::string frameOut;
     ros::param::get("/cloud_tansformer/frameIn", frameIn);
